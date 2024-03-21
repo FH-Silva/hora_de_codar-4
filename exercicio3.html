@@ -9,12 +9,6 @@
     <script>
         //Vamos criar uma lista de compras. Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas. Caso a fruta esteja no array, remova-a e exiba a mensagem "Fruta foi retirada da lista". Peça novamente para o usuário digitar o nome de uma fruta para ser removida. Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado". Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
 
-        //Array com frutas 
-        //exibir para user e pedir para escolher uma
-        //retirar a fruta escolhida da array e avisar ao user
-        //pedir para retirar outra fruta da lista
-        //quanto nao tiver nenhuma, avisar com "Lista finalizada"
-
         var frutas = ["Maçã", "Banana", "Uva", "Morango"];
         console.log(frutas);
         
@@ -22,7 +16,7 @@
             var escolha = prompt("Escolha uma das frutas " + frutas);
             var remove = frutas.indexOf(escolha);
 
-            if (remove !== -1) {
+            if (remove !== -1) {//Verificar se a fruta escolhida está na array e removê-la
                 frutas.splice(remove, 1);
                 console.log(frutas);
             }
@@ -33,7 +27,7 @@
                 alert("Fruta indisponível no nosso mercado");
                 console.log(frutas);
             }
-        } while (frutas.length !== 0)
+        } while (frutas.length !== 0)//Repetir o processo até que a quantidade de elementos da array "frutas" seja igual a zero
         alert("Lista de compras finalizadas");
     </script>
 </head>
